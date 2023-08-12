@@ -36,3 +36,11 @@ export const getReviews = async (): Promise<Review[]> => {
   }
   return reviews;
 };
+
+export const getSlugs = async (): Promise<string[]> => {
+  const files = await readdir("./content/reviews"); // node js api
+  const slugs = files
+    .filter((file) => file.endsWith("md"))
+    .map((file) => file.slice(0, -`.md`.length)); // from start to end excluding .md
+  return slugs;
+};

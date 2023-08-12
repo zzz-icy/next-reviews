@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Heading from "@/components/Heading";
-import { getReviews } from "@/lib/review";
+import { getReviews, getSlugs } from "@/lib/review";
+
+// The generateStaticParams function can be used in combination with dynamic route segments to statically generate routes at build time instead of on-demand at request time.
+// https://nextjs.org/docs/app/api-reference/functions/generate-static-params
+export const generateStaticParams = async () => {
+  const slugs = await getSlugs();
+  return slugs.map((slug) => {
+    slug;
+  });
+};
 
 const ReviewsPage = async () => {
   const reviews = await getReviews();
