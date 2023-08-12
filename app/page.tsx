@@ -1,7 +1,9 @@
+import Heading from "@/components/Heading";
+
 const HomePage: React.FC = () => {
   return (
     <>
-      <h1>Hannah's Home Cafe</h1>
+      <Heading>Hannah's Home Cafe</Heading>
       <p>No Coffee No Life</p>
     </>
   );

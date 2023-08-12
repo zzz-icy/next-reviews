@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Heading from "@/components/Heading";
 
 const ReviewsPage: React.FC = () => {
   return (
     <>
-      <h1>Reviews</h1>
+      <Heading>Reviews</Heading>
       <ul>
         <li>
           <Link href="/reviews/hollow-knight">Hollow Knight</Link>
