@@ -2,10 +2,19 @@ import type { ReactNode } from "react";
 import Navbar from "@/components/NavBar";
 import "./globals.css";
 import { exo2, orbitron } from "./fonts";
+import { Metadata } from "next";
 
 interface LayoutProps {
   children: ReactNode;
 }
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Indie Gamer',
+    template: '%s | Indie Gamer',
+  },
+};
+
 
 const RootLayout = ({ children }: LayoutProps) => {
   return (
