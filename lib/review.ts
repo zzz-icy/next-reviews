@@ -2,6 +2,11 @@ import { readFile, readdir } from "fs/promises";
 import { marked } from "marked";
 import matter from "gray-matter";
 
+export async function getFeaturedReview(): Promise<Review> {
+  const reviews = await getReviews();
+  return reviews[0];
+}
+
 export const getReview = async (slug: string) => {
   // If you used React in the past, you'll know that normally this is not possible.
   // It only works with React Server Components,
@@ -34,6 +39,7 @@ export const getReviews = async (): Promise<Review[]> => {
     const review = await getReview(slug);
     reviews.push(review);
   }
+  reviews.sort((a, b) => b.date.localeCompare(a.date));
   return reviews;
 };
 

@@ -22,7 +22,7 @@ const ReviewsPage = async () => {
             key={slug}
             className="bg-white border w-80 rounded hover:shadow-xl"
           >
-            <Link href={`/reviews/${title}`}>
+            <Link href={`/reviews/${slug}`}>
               <img
                 src={image}
                 alt=""
