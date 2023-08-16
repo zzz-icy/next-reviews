@@ -6,11 +6,14 @@ const Navbar: React.FC = () => {
       <ul className="flex gap-2">
         <li>
           {/* client-side navigation */}
-          <Link href="/" className="text-orange-800 hover:underline">
-            Home
+          <Link
+            href="/"
+            className="text-orange-800 hover:underline font-orbitron font-bold"
+          >
+            Indie Gamer
           </Link>
         </li>
-        <li>
+        <li className="ml-auto">
           <Link href="/reviews" className="text-orange-800  hover:underline">
             Reviews
           </Link>
