@@ -1,0 +1,3 @@
+{
+	"extends": "next/core-web-vitals" // This will enable all the Next.js and related rules.
+}
