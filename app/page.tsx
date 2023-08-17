@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 
 const HomePage = async () => {
   const featuredReview = await getFeaturedReview();
- 
   return (
     <>
       <Heading>Indie Gamer</Heading>
@@ -29,7 +28,7 @@ const HomePage = async () => {
             className="rounded-t sm:rounded-l sm:rounded-r-none"
           />
           <h2 className="py-1 text-center font-orbitron font-semibold sm:px-2">
-               {featuredReview.title}
+              {featuredReview.title}
           </h2>
         </Link>
       </div>
