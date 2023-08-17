@@ -1,15 +1,14 @@
 import Link from "next/link";
 import Heading from "@/components/Heading";
 import { getReviews, getSlugs } from "@/lib/review";
+import { Metadata } from "next";
 
-// The generateStaticParams function can be used in combination with dynamic route segments to statically generate routes at build time instead of on-demand at request time.
-// https://nextjs.org/docs/app/api-reference/functions/generate-static-params
-export const generateStaticParams = async () => {
-  const slugs = await getSlugs();
-  return slugs.map((slug) => {
-    slug;
-  });
+// * The metadata object and generateMetadata function exports are only supported in Server Components.
+// * You cannot export both the metadata object and generateMetadata function from the same route segment.
+export const metadata: Metadata = {
+  title: 'Reviews',
 };
+
 
 const ReviewsPage = async () => {
   const reviews = await getReviews();
